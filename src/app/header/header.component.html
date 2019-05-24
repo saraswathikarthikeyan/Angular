@@ -1,0 +1,32 @@
+  <div class="example-container" [class.example-is-mobile]="mobileQuery.matches" >
+      <mat-toolbar color="primary"  class="example-toolbar">
+          <div fxFlex fxShow="true" fxHide.lt-md="true">
+            <a mat-button routerLink="/about" routerLinkActive="active" class="linkCls">About</a>
+            <a mat-button routerLink="/resume" routerLinkActive="active" class="linkCls">Resume</a>
+            <a mat-button routerLink="/contact" routerLinkActive="active" class="linkCls">Contact</a>    
+            <a mat-button routerLink="/portfolio" routerLinkActive="active" class="linkCls">Portfolio</a>
+          </div>
+          <div fxShow="true" fxHide.gt-sm="true" >
+              <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+          </div>
+          <h1 class="example-app-name">Saraswathi Anbu</h1>
+
+      </mat-toolbar>
+    
+      <mat-sidenav-container class="example-sidenav-container"
+                             [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+        <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+                     [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+          <mat-nav-list fxLayout="column">
+              <a mat-button routerLink="/about" routerLinkActive="active" class="linkCls">About</a>
+              <a mat-button routerLink="/resume" routerLinkActive="active" class="linkCls">Resume</a>
+              <a mat-button routerLink="/contact" routerLinkActive="active" class="linkCls">Contact</a>    
+              <a mat-button routerLink="/portfolio" routerLinkActive="active" class="linkCls">Portfolio</a>          
+          </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <router-outlet></router-outlet>
+          </mat-sidenav-content>
+      </mat-sidenav-container>
+      <app-footer></app-footer>
+    </div>

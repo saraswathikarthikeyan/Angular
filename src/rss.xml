@@ -1,0 +1,58 @@
+<rss version="2.0">
+<channel>
+<title>Xul.fr: Tutorials and Applications of the Web 2.0</title>
+<link>https://www.xul.fr/</link>
+<description>
+Ajax, JavaScript, XUL, RSS, PHP and all technologies of the Web 2.0. Building a CMS, tutorial and application.
+</description>
+<pubDate>Wed, 07 Feb 2007 14:20:24 GMT</pubDate>
+<item>
+<title>News on interfaces of the Web in 2010</title>
+<link>https://www.xul.fr/en/2010.php</link>
+<description>
+Steve Jobs explains why iPad does not support Adobe Flash:<em>At Adobe they are lazy. They have the potential to make interesting things, but they refuse to do so. Apple does not support Flash because it is too buggy. Each time a Mac crashes, most often it is because of Flash. Nobody will use Flash. The world is moving to <a href="https://www.xul.fr/en/html5/" target="_parent">HTML 5</a>
+</description>
+<pubDate>Sat, 11 Dec 10 09:41:06 +0100</pubDate>
+</item>
+<item>
+<title>Textured Border in CSS</title>
+<link>https://www.xul.fr/en/css/textured-border.php</link>
+<description>
+The border attribute of the style sheets can vary in color and width, but it was not expected to give it a texture. However, only a CSS rule is required to add this graphic effect... The principle is to assign a texture to the whole <em>fieldset</em> and insert into it another <em>fieldset</em> (for rounded edges) or a <em>div</em>, whose background is the same as that of the page
+</description>
+<pubDate>Wed, 29 Jul 09 15:56:54 0200</pubDate>
+</item>
+<item>
+<title>Firefox 3.5</title>
+<link>https://www.xul.fr/gecko/firefox35.php</link>
+<description>
+Les balises audio et vidéo sont implémentées. Le format de donnée JSON est reconnu nativement par Firefox. L'avantage est d'éviter l'utilisation de la fonction eval() qui n'est pas sûr, ou d'employer des librairies additionnelles, qui est nettement plus lent
+</description>
+<pubDate>Wed, 24 Jun 09 15:18:47 0200</pubDate>
+</item>
+<item>
+<title>Contestation about HTML 5</title>
+<link>https://www.xul.fr/en/html5/contestation.php</link>
+<description>
+Nobody seemed to be worried so far, but the definition of HTML 5 that is intended to be the format of billions of Web pages in coming years, is conducted and decided by a single person! <em>Hey, wait! Pay no attention to the multi-billions dollar Internet corporation behind the curtain. It's me Ian Hickson! I am my own man
+</description>
+<pubDate>Wed, 24 Jun 09 15:18:29 0200</pubDate>
+</item>
+<item>
+<title>Form Objects in HTML 4</title>
+<link>https://www.xul.fr/javascript/form-objects.php</link>
+<description>
+It is created by the HTML <em>form</em> tag: The name or id attribute can access by script to its content. It is best to use both attributes with the same identifier, for the sake of compatibility. The <em>action</em> attribute indicates the page to which send the form data. If this attribute is empty, the page that contains the form that will be charged the data as parameters
+</description>
+<pubDate>Wed, 24 Jun 09 15:17:49 0200</pubDate>
+</item>
+<item>
+<title>DOM Tutorial</title>
+<link>https://www.xul.fr/en/dom/</link>
+<description>
+The Document Object Model describes the structure of an XML or HTML document, a web page and allows access to each individual element.
+</description>
+<pubDate>Wed, 06 May 2009 18:30:11 GMT</pubDate>
+</item>
+</channel>
+</rss>

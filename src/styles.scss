@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import 'variables';
+@import '../node_modules/font-awesome/scss/font-awesome';
+
+// some basic resets 
+;
+body { 
+  padding: 0; 
+  margin: 0; 
+  font-family:  Helvetica,Arial, sans-serif;
+  
+}
+
+.flex-spacer {
+  flex: 1 1 auto;
+}
+
+.container {
+  display:flex;
+  background-color: #D1C4E9;
+}
+
+.inner-container {
+  background-color: white;
+  height: 100%;
+  align-content: center;
+  align-items: center;
+  align-self: center;
+  font-family:  Helvetica,Arial, sans-serif;
+  width:100%;
+}
+
+.titleLogoCls {
+  min-height: 100px;
+  padding-top: 40px;
+  width:80%;
+  //background-color: azure;
+  font-family:  Helvetica,Arial, sans-serif;
+}

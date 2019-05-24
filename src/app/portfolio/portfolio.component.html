@@ -1,0 +1,46 @@
+<div class="container"
+     fxLayout="row"
+     fxLayout.sm="column"
+     fxLayout.xs="column"
+     fxLayoutAlign="center"
+     fxLayoutGap="10px">
+
+     <div  fxFlex="98%" class="inner-container"  >
+        <div fxflex class="titleLogoCls" >
+            <mat-list >
+                    <mat-list-item><h1>Little more details at a glance! </h1></mat-list-item>
+                    <mat-divider></mat-divider>
+            </mat-list>
+        </div>
+        
+
+        <div fxflex class="MyContent" fxLayoutGap="20px" >
+            <mat-accordion class="example-headers-align">
+                
+                <mat-expansion-panel  *ngFor="let companyInfo of companiesDetails"  [expanded] =  "companyInfo.id === '1'" >
+                    <mat-expansion-panel-header >
+                        <mat-panel-title>
+                            {{companyInfo.title}} 
+                          </mat-panel-title> 
+                          <mat-panel-description>
+                            {{companyInfo.titledescription}}
+                          </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <mat-grid-list [appResponsivecols]="{xs: 1, sm: 1, md: 3, lg: 3, xl: 2}" #grid style="border:0px solid red;" rowHeight ="2:1" >
+                            <mat-grid-tile>
+                                <mat-panel-description>                       
+                                    <img src=" {{companyInfo.image}}" alt=" {{companyInfo.companyname}}">
+                            </mat-panel-description>
+                            </mat-grid-tile>
+                            <mat-grid-tile>
+                                <mat-panel-description>                       
+                                    <p style="color:black"> {{companyInfo.projectdescription}}</p>
+                                </mat-panel-description>
+                            </mat-grid-tile>
+                    </mat-grid-list>
+
+                </mat-expansion-panel>
+              
+            </mat-accordion>
+        </div>                            
+</div>

@@ -1,0 +1,36 @@
+<div class="container"
+     fxLayout="row"
+     fxLayout.sm="column"
+     fxLayout.xs="column"
+     fxLayoutAlign="center"
+     fxLayoutGap="10px">
+
+     <div  fxFlex="98%" class="inner-container"  >
+        <div fxflex class="titleLogoCls" >
+            <mat-list >
+                    <mat-list-item><h1>My Resume! </h1></mat-list-item>
+                    <mat-divider></mat-divider>
+            </mat-list>
+        </div>
+        
+
+        <div fxflex class="MyContent" fxLayoutGap="20px" 
+        style="border:1px solid gray;" >
+                <div *ngIf="isLoaded" style="text-align: center;padding-top:10px;">
+                    <button mat-stroked-button  (click)="prevPage()" [disabled]="page === 1">Prev</button>
+                    <span>{{ page }} / {{ totalPages }}</span>
+                    <button mat-stroked-button (click)="nextPage()" [disabled]="page === totalPages">Next</button>&nbsp;
+                    <button mat-stroked-button ><a href="{{ pdfSrc }}" download="{{ fileName }}" class="dwnldLink">
+                        <i class="fa fa-file-pdf-o"></i> Download</a></button>
+                </div>
+                <div>
+                    <pdf-viewer [src]="pdfSrc" 
+                            [render-text]="false" [show-all]="false"
+                            [page]="page"
+                            (after-load-complete)="afterLoadComplete($event)"
+                            style="display: block; "></pdf-viewer>
+
+                </div>
+        </div>
+
+</div>

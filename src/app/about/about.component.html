@@ -1,0 +1,30 @@
+<div class="container"
+     fxLayout="row"
+     fxLayout.sm="column"
+     fxLayout.xs="column"
+     fxLayoutAlign="center"
+     fxLayoutGap="10px">
+
+     <div  fxFlex="98%" class="inner-container"  >
+
+        <div fxflex class="titleLogoCls"  style="border:0px solid red;">
+            <mat-list>
+                <mat-list-item><h1>Dream..! High in the Sky! </h1></mat-list-item>
+                <mat-divider></mat-divider>             
+                <mat-list-item><h1>Saraswathi</h1></mat-list-item>
+            </mat-list>
+        </div>
+
+        <div fxflex class="MyContent"  >
+            <mat-grid-list [appResponsivecols]="{xs: 1, sm: 1, md: 2, lg: 2, xl: 2}" #grid style="border:0px solid red;" rowHeight ="520px" *ngFor="let homeDet of homeInfo " >
+                <mat-grid-tile>
+                    <img src="{{homeDet.image}}" alt="sara">
+                </mat-grid-tile>
+                <mat-grid-tile >
+                    <div>
+                    <p>{{ homeDet.description }}</p></div>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </div>
+    </div>
+</div>

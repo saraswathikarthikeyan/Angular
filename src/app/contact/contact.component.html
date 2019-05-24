@@ -1,0 +1,77 @@
+<div class="container"
+     fxLayout="row"
+     fxLayout.sm="column"
+     fxLayout.xs="column"
+     fxLayoutAlign="center"
+     fxLayoutGap="10px">
+
+     <div  fxFlex="98%" class="inner-container"  >
+
+        <div  fxflex class="titleLogoCls">
+            <div><h1>To reach me! </h1></div>
+            <hr>
+        </div>
+
+        
+        <mat-tab-group animationDuration="1000ms" mat-align-tabs="center">
+            <mat-tab label="Feedback">
+            <div fxFlex >
+                <div ><h3>Send me your Feedback/Message</h3></div>
+                <div  *ngIf="successMsg">
+                        <h4>{{successMsg}}</h4>
+                </div>
+                <div >
+                <form novalidate [formGroup]="msgFormGrp" (ngSubmit) ="onSubmit()" *ngIf="!loadDisplay" class="form-size">
+                    <p>
+                    <mat-form-field class="half-width">
+                        <input matInput formControlName="firstname" placeholder="Name" type="text" required>
+                    </mat-form-field>
+                    <mat-error *ngIf="formErrors.firstname">{{formErrors.firstname}}</mat-error>
+                    </p>
+                    <p>
+                    <mat-form-field class="half-width">
+                        <input matInput formControlName="email" placeholder="Email" type="email" email required>
+                    </mat-form-field>
+                    <mat-error *ngIf="formErrors.email">{{formErrors.email}}</mat-error>
+                    </p>
+                    <p>
+                    <mat-form-field class="full-width">
+                        <textarea matInput formControlName="message" placeholder="Message" rows=5 required></textarea>
+                    </mat-form-field>
+                    <mat-error *ngIf="formErrors.email">{{formErrors.email}}</mat-error>
+
+                    </p>
+                    <button mat-raised-button color="primary" type="submit" [disabled]="msgFormGrp.invalid">Submit</button>
+                </form>
+                </div>
+                <div  *ngIf="loadDisplay">      
+                    <mat-spinner></mat-spinner><h4>Sending email . . . Please Wait</h4>
+                </div>
+            </div>
+            </mat-tab>
+           
+            <mat-tab label="Social Media" > 
+                <mat-grid-list [appResponsivecols]="{xs: 1, sm: 1, md: 2, lg: 2, xl: 2}" rowHeight="2:1" style="border:0px solid red;"   >
+                    <mat-grid-tile>
+                           
+                       <mat-list role="list">
+                                <mat-list-item role="listitem"><h4>Other social media links:</h4> 
+                                </mat-list-item>
+                                
+                                <mat-list-item role="listitem">
+                                        <a mat-icon-button href="mailto:sara_anbu85@yahoo.co.in"><i class="fa fa-envelope fa-2x"></i>  <b>Email</b></a>
+                                </mat-list-item>
+                                <mat-list-item role="listitem">        
+                                    <a mat-icon-button  href="https://www.linkedin.com/in/saraswathi-anbu-07364215a/" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i> <span> <b> Linkedin</b></span></a>
+                            </mat-list-item>
+                        </mat-list>
+                        
+                    </mat-grid-tile>
+                </mat-grid-list>
+            </mat-tab>
+        </mat-tab-group>
+
+        
+     </div>
+
+</div>
